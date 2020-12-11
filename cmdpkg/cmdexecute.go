@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"strconv"
 )
 
 //ReadCommands function use to execute from json file
@@ -25,20 +24,22 @@ func ReadCommands(file string) {
 	byteValue, _ := ioutil.ReadAll(jsonFile)
 
 	// we initialize our Users array
-	var users Users
+	var hosts Hostlist
 
 	// we unmarshal our byteArray which contains our
 	// jsonFile's content into 'users' which we defined above
-	json.Unmarshal(byteValue, &users)
+	json.Unmarshal(byteValue, &hosts)
 
-	// we iterate through every user within our users array and
-	// print out the user Type, their name, and their facebook url
-	// as just an example
-	for i := 0; i < len(users.Users); i++ {
-		fmt.Println("User Type: " + users.Users[i].Type)
-		fmt.Println("User Age: " + strconv.Itoa(users.Users[i].Age))
-		fmt.Println("User Name: " + users.Users[i].Name)
-		fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
+	// iterate throuh hosts and print
+	for i := 0; i < len(hosts.Hosts); i++ {
+		fmt.Printf("\n===========Host-%d==========\n", i+1)
+		fmt.Println("Hostname: " + hosts.Hosts[i].Hostname)
+		fmt.Println("Username: " + hosts.Hosts[i].Username)
+		fmt.Println("Password: " + hosts.Hosts[i].Password)
+		fmt.Println("Conntype: " + hosts.Hosts[i].Conntype)
+		fmt.Println("--------Commands---------")
+		for j := 0; j < len(hosts.Hosts[i].Commands); j++ {
+			fmt.Println("Command: " + hosts.Hosts[i].Commands[j])
+		}
 	}
-
 }
