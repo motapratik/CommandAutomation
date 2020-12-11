@@ -1,0 +1,54 @@
+[
+    {
+      "hostName": "10.14.31.125",
+      "userName": "support",
+      "password": "Cohe$1tyCohe$1ty",
+      "sshkeyfile": "",
+      "osType": "linux",
+      "conntype": "ssh",
+      "commands": [
+        "ls -al",
+        "pwd; cd /tmp; ls -al",
+        "mkdir /tmp/test"
+      ]
+    },
+    {
+      "hostName": "10.14.31.125",
+      "userName": "support",
+      "password": "Cohe$1tyCohe$1ty",
+      "sshkeyfile": "",
+      "osType": "windows",
+      "conntype": "ssh",
+      "commands": [
+        "ls -al",
+        "pwd; cd /tmp; ls -al",
+        "mkdir /tmp/test"
+      ]
+    },
+    {
+      "hostName": "10.14.31.125",
+      "userName": "support",
+      "password": "Cohe$1tyCohe$1ty",
+      "sshkeyfile": "",
+      "osType": "linux",
+      "conntype": "ssh",
+      "commands": [
+        "ls -al",
+        "pwd; cd /tmp; ls -al",
+        "mkdir /tmp/test"
+      ]
+    },
+    {
+      "hostName": "10.14.31.125",
+      "userName": "support",
+      "password": "Cohe$1tyCohe$1t",
+      "sshkeyfile": "",
+      "osType": "windows",
+      "conntype": "ssh",
+      "commands": [
+        "ls -al",
+        "pwd; cd /tmp; ls -al",
+        "mkdir /tmp/test"
+      ]
+    }
+  ]
